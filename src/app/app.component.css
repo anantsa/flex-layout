@@ -1,10 +1,5 @@
-.example-spacer {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.example-icon {
-  padding: 0 14px;
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
 }
 /*# sourceMappingURL=app.component.css.map */
