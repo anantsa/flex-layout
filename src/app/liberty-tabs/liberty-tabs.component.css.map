@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "liberty-tabs.component.scss"
+    ],
+    "names": [],
+    "file": "liberty-tabs.component.css"
+}

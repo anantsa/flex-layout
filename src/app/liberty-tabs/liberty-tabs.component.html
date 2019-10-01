@@ -1,0 +1,41 @@
+<mat-tab-group [selectedIndex]="0" mat-stretch-tabs>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>desktop_mac</mat-icon>
+      Dashboard
+    </ng-template>
+    <app-dashboard></app-dashboard>
+    <app-profile-dashboard></app-profile-dashboard>
+
+  </mat-tab>
+  <mat-tab label="Widgets">
+    <ng-template mat-tab-label>
+      <mat-icon>widgets</mat-icon>
+      Widgets
+    </ng-template>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>format_paint</mat-icon>
+      UI Elements
+    </ng-template>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>book</mat-icon>
+      Pages
+    </ng-template>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>description</mat-icon>
+      Form
+    </ng-template>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>apps</mat-icon>
+      Apps
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

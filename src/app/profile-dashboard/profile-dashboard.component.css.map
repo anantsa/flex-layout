@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,gBAAgB,EAAE,iEAAiE;EACnF,eAAe,EAAE,KAAK;CACvB",
+    "sources": [
+        "profile-dashboard.component.scss"
+    ],
+    "names": [],
+    "file": "profile-dashboard.component.css"
+}

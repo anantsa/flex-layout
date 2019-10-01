@@ -1,10 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.wide-container {
+  margin: 1em;
+}
+
+.no-border-radius {
+  border-radius: 0px !important;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.m-tb-10 {
+  margin: 10px 0;
+}
+
+.p-tb-10 {
+  padding: 10px 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.product-data {
+  padding: 10px 0;
 }
 /*# sourceMappingURL=styles.css.map */

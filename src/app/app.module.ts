@@ -11,13 +11,34 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LibertyTabsComponent } from './liberty-tabs/liberty-tabs.component';
+import { LibertyToolbarComponent } from './liberty-toolbar/liberty-toolbar.component';
+import { ProfileDashboardComponent } from './profile-dashboard/profile-dashboard.component';
+import { ProductGraphComponent } from './profile-dashboard/product-graph/product-graph.component';
+import { ProductSalesComponent } from './profile-dashboard/product-sales/product-sales.component';
+import { ProfileInfoComponent } from './profile-dashboard/profile-info/profile-info.component';
+import { TableDataComponent } from './table-data/table-data.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    LibertyTabsComponent,
+    LibertyToolbarComponent,
+    ProfileDashboardComponent,
+    ProductGraphComponent,
+    ProductSalesComponent,
+    ProfileInfoComponent,
+    TableDataComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +50,12 @@ import {MatCardModule} from '@angular/material/card';
     FlexLayoutModule,
     MatInputModule,
     MatBadgeModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

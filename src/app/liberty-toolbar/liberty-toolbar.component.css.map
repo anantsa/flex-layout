@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "liberty-toolbar.component.scss"
+    ],
+    "names": [],
+    "file": "liberty-toolbar.component.css"
+}
