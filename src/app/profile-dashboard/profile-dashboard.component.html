@@ -1,5 +1,56 @@
-<div fxLayout="row" fxLayout.xs="column" class="wide-container" fxLayoutAlign="space-between stretch">
-    <app-profile-info fxFlex="33"></app-profile-info>
+<div fxLayout="row" class="wide-container" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+
+    <mat-card class="no-border-radius" fxFlex>
+        <mat-card-header fxLayout="column" class="center-text" fxLayoutAlign="center ">
+            <div mat-card-avatar class="card-header-image"></div>
+            <mat-card-title>John Doe</mat-card-title>
+            <mat-card-subtitle>Developer</mat-card-subtitle>
+        </mat-card-header>
+        <p class="mat-body center-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor sit repellat maiores fugit
+            officiis?
+        </p>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <button mat-flat-button color="primary">Primary</button>
+        </div>
+        <mat-divider [inset]="true"></mat-divider>
+    </mat-card>
+
+
+    <mat-card fxLayout="column" class="no-border-radius" fxFlex>
+        <div class="product-data" fxLayout="row">
+            <div fxLayout="column">
+                <h5 class="no-margin">Top Products</h5>
+                <h2 class="no-margin">568,987</h2>
+                <p class="no-margin">6.5% Lorem ipsum dolor sit.</p>
+            </div>
+        </div>
+        <div fxFlex="row">
+            <mat-divider class="m-tb-10"></mat-divider>
+        </div>
+        <div class="product-data" fxLayout="row">
+            <div fxLayout="column">
+                <h5 class="no-margin">Support Cases</h5>
+                <h2 class="no-margin">315,485</h2>
+                <p class="no-margin">61.5% change from yesterday.</p>
+            </div>
+        </div>
+    </mat-card>
+
+
+    <mat-card fxLayout="column" class="no-border-radius" fxFlex>
+        <mat-card-header>
+            <div mat-card-avatar class="profile-card-img"></div>
+        </mat-card-header>
+        <mat-card-title>Product Sales</mat-card-title>
+        <mat-card-subtitle>Sales graph</mat-card-subtitle>
+        <p class="mat-body center-text">
+            Lorem ipsusssm dolor sit amet consectetur adipisicing elit. Magnam dolor sit repellat maiores fugit
+            officiis?
+        </p>
+    </mat-card>
+
+    <!-- <app-profile-info fxFlex="33"></app-profile-info>
     <app-product-graph fxFlex="33"></app-product-graph>
-    <app-product-sales fxFlex="33"></app-product-sales>
+    <app-product-sales fxFlex="33"></app-product-sales> -->
 </div>
