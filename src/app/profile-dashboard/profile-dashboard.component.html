@@ -1,8 +1,7 @@
 <div fxLayout="row" class="wide-container" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
-
     <mat-card class="no-border-radius" fxFlex>
-        <mat-card-header fxLayout="column" class="center-text" fxLayoutAlign="center ">
-            <div mat-card-avatar class="card-header-image"></div>
+        <mat-card-header fxLayout="column" fxLayoutAlign="center center" class="center-text">
+            <div mat-card-avatar class="profile-card-img"></div>
             <mat-card-title>John Doe</mat-card-title>
             <mat-card-subtitle>Developer</mat-card-subtitle>
         </mat-card-header>
@@ -17,17 +16,14 @@
     </mat-card>
 
     <mat-card fxLayout="column" class="no-border-radius" fxFlex>
-        <div class="product-data" fxLayout="row">
-            <div fxLayout="column" fxLayoutAlign="start center">
+        <div class="product-data" fxFlex>
+            <div fxLayout="column">
                 <h5 class="no-margin">Top Products</h5>
                 <h2 class="no-margin">568,987</h2>
-                <h6 class="no-margin">6.5% Lorem ipsum dolor sit.</h6>
+                <p class="no-margin">6.5% Lorem ipsum dolor sit.</p>
             </div>
         </div>
-        <div fxFlex="row">
-            <mat-divider class="m-tb-10"></mat-divider>
-        </div>
-        <div class="product-data" fxLayout="row">
+        <div class="product-data" fxFlex>
             <div fxLayout="column">
                 <h5 class="no-margin">Support Cases</h5>
                 <h2 class="no-margin">315,485</h2>
@@ -36,11 +32,11 @@
         </div>
     </mat-card>
     <mat-card fxLayout="column" class="no-border-radius" fxFlex>
-        <mat-card-header>
+        <mat-card-header fxLayoutAlign="center space-around" fxFlex>
             <div mat-card-avatar class="profile-card-img"></div>
+            <mat-card-title>Product Sales</mat-card-title>
+            <mat-card-subtitle>Sales graph</mat-card-subtitle>
         </mat-card-header>
-        <mat-card-title>Product Sales</mat-card-title>
-        <mat-card-subtitle>Sales graph</mat-card-subtitle>
         <p class="mat-body center-text">
             Lorem ipsusssm dolor sit amet consectetur adipisicing elit. Magnam dolor sit repellat maiores fugit
             officiis?

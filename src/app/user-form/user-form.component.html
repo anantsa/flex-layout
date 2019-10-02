@@ -1,0 +1,39 @@
+<form [formGroup]="profileForm">
+    <div class="wide-container">
+        <div class="form-container" fxLayout="column" fxFlex="33" fxLayoutGap="10px">
+            <h2>Fill up your form</h2>
+            <mat-form-field hintLabel="Max 10 characters">
+                <mat-label>Enter Your Name</mat-label>
+                <input #inputName maxlength="10" matInput placeholder="Full Name">
+                <mat-icon matPrefix>sentiment_very_satisfied</mat-icon>
+                <mat-hint align="end">{{inputName.value.length}}/10</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field hintLabel="Eg: New Baneswor">
+                <mat-label>Enter Your Address</mat-label>
+                <mat-icon matSuffix>home</mat-icon>
+                <input #inputLocation matInput placeholder="Location">
+                <mat-hint align="end">{{inputLocation.value.length}}/10</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="text" formControlName="email" placeholder="Enter you Email">
+                <mat-error *ngIf="profileForm.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select placeholder="Choose One">
+                    <mat-option value="male">
+                        Male
+                    </mat-option>
+                    <mat-option value="female">
+                        Female
+                    </mat-option>
+                    <mat-option value="other">
+                        Other
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div fxFlex></div>
+    </div>
+</form>
