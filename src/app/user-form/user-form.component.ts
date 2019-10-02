@@ -6,19 +6,15 @@ import { Validators, FormControl, FormGroup, NgForm } from '@angular/forms';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.scss']
 })
-export class UserFormComponent implements OnInit {
+export class UserFormComponent  {
   hide: true;
   profileForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     matDatePicker: new FormControl
   });
 
-
-  constructor() { }
-
-  ngOnInit() {
-    // console.log(this.profileForm);
-  }
+  // minDate = new Date();
+  // maxDate = new Date(2019, 3, 15);
 
   getErrorMessage() {
     return this.profileForm.controls.email.hasError('required') ? 'You must enter a value' :

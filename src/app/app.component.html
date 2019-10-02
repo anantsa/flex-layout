@@ -1,3 +1,10 @@
-<app-liberty-toolbar></app-liberty-toolbar>
-<app-liberty-tabs></app-liberty-tabs>
-
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">Sidenav</mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="opened = !opened">Toggle</button>
+        <button (click)="sidenav.open()">Toggle Open</button>
+        <button (click)="sidenav.close()">Toggle Close</button>
+        <app-liberty-toolbar></app-liberty-toolbar>
+        <app-liberty-tabs></app-liberty-tabs>
+    </mat-sidenav-content>
+</mat-sidenav-container>

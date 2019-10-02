@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  opened: false;
   title = 'my-app';
+
+  log(state) {
+    console.log(state);
+  }
+
 }
