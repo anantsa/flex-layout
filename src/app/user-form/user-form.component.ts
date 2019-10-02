@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
@@ -7,16 +7,17 @@ import { Validators, FormControl, FormGroup, NgForm } from '@angular/forms';
   styleUrls: ['./user-form.component.scss']
 })
 export class UserFormComponent implements OnInit {
-
+  hide: true;
   profileForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email])
+    email: new FormControl('', [Validators.required, Validators.email]),
+    matDatePicker: new FormControl
   });
 
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.profileForm);
+    // console.log(this.profileForm);
   }
 
   getErrorMessage() {

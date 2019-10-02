@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout'; 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
@@ -19,6 +19,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LibertyTabsComponent } from './liberty-tabs/liberty-tabs.component';
@@ -26,9 +29,10 @@ import { LibertyToolbarComponent } from './liberty-toolbar/liberty-toolbar.compo
 import { ProfileDashboardComponent } from './profile-dashboard/profile-dashboard.component';
 import { TableDataComponent } from './table-data/table-data.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { MatFormFieldModule } from '@angular/material/form-field'; 
-import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -36,7 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     DashboardComponent,
-   LibertyTabsComponent,
+    LibertyTabsComponent,
     LibertyToolbarComponent,
     ProfileDashboardComponent,
     TableDataComponent,
@@ -61,9 +65,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSortModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatSelectModule ,
+    MatSelectModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
