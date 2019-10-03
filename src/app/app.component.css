@@ -17,4 +17,36 @@
   background: #00c3ff;
   width: 220px;
 }
+
+.container {
+  padding: 1em;
+}
+
+.parent {
+  height: 180px;
+}
+
+.flex-bg:nth-child(1) {
+  background: #00f7ff;
+}
+
+.flex-bg:nth-child(2) {
+  background: #33ffdd;
+}
+
+.flex-bg:nth-child(3) {
+  background: #3da8ff;
+}
+
+.flex-bg:nth-child(4) {
+  background: #2cce6a;
+}
+
+.flex-bg:nth-child(5) {
+  background: #05c225;
+}
+
+.newStyle {
+  background: red;
+}
 /*# sourceMappingURL=app.component.css.map */

@@ -17,3 +17,27 @@ $mat-card-header-size: 40px !default;
   background:rgb(0, 195, 255);
   width:220px;
 }
+.container {
+  padding: 1em;
+}
+.parent {
+  height: 180px;
+}
+.flex-bg:nth-child(1) {
+  background: rgb(0, 247, 255);  
+}
+.flex-bg:nth-child(2) {
+  background: rgb(51, 255, 221);  
+}
+.flex-bg:nth-child(3) {
+  background: rgb(61, 168, 255);  
+}
+.flex-bg:nth-child(4) {
+  background: rgb(44, 206, 106);  
+}
+.flex-bg:nth-child(5) {
+  background: rgb(5, 194, 37);  
+}
+.newStyle{
+  background: red;
+}

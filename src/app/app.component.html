@@ -56,8 +56,29 @@
     </mat-sidenav-content>
 </mat-sidenav-container> -->
 
-<div fxLayout="row" fxLayoutAlign="space-between center">
-    <div fxFlex></div>
-    <div fxFlex></div>
-    <div fxFlex></div>
+<div class="container">
+    <h5>Fixed Width of 33% each</h5>
+    <div class="parent" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+        <div fxFlex="33" class="flex-bg">1</div>
+        <div fxFlex="33" class="flex-bg">2</div>
+        <div fxFlex="33" class="flex-bg">3</div>
+    </div>
+    <br>
+
+    <h5>Using fxFlex</h5>
+    <div class="parent" fxLayout="row" fxLayout.xs="column" fxLayoutGap="2px">
+        <div class="flex-bg" fxFlex>1234</div>
+        <div class="flex-bg" fxFlex>1234</div>
+        <div class="flex-bg" fxFlex>1234</div>
+    </div>
+
+    <h5>5 columns</h5>
+    <div class="parent" fxLayout="row wrap" fxLayoutGap="2px">
+        <div class="flex-bg" ngClass="['flex-bg','newStyle']" [ngClass.lt-sm]="{'newStyle':true, 'flex-bg':false}" fxFlex.lt-lg="33" fxFlex>A</div>
+        <div class="flex-bg" fxFlex.lt-lg="33" fxFlex>B</div>
+        <div class="flex-bg" fxFlex.lt-lg="33" fxFlex>C</div>
+        <div class="flex-bg" fxFlex >D</div>
+        <div class="flex-bg" fxFlex >E</div>
+    </div>
+
 </div>
