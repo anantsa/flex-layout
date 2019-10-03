@@ -1,6 +1,6 @@
 <form [formGroup]="profileForm" class="wide-container" fxLayoutGap="10px" fxLayout="row">
     <div fxLayout="column" fxFlex>
-        <h2>Fill up your form</h2>
+        <h4>Fill up your form</h4>
         <mat-form-field hintLabel="Max 10 characters">
             <mat-label>Enter Your Name</mat-label>
             <input #inputName maxlength="10" matInput placeholder="Full Name">
@@ -49,11 +49,181 @@
     </div>
 
     <div fxLayout="column" fxFlex>
-        <h2>Date of Birth</h2>
+        <h4>Date of Birth</h4>
         <mat-form-field>
             <input matInput [matDatepicker]="matDatepicker" placeholder="Choose a date">
             <mat-datepicker-toggle matSuffix [for]="matDatepicker"></mat-datepicker-toggle>
             <mat-datepicker #matDatepicker startView="multi-year"></mat-datepicker>
         </mat-form-field>
+        <h4>Finally,</h4>
+        <mat-accordion>
+            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Personal detail
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Mandatory
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div fxLayout="row">
+                    <mat-radio-group>
+                        <mat-radio-button value="1" labelPosition="after">Male</mat-radio-button>
+                        <mat-radio-button value="2" >Female</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div fxLayout="column">
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="First Name">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Last Name">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput type="number" placeholder="Contact Number">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" placeholder="Email Address">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <mat-action-row>
+                    <!-- <button mat-button color="warn" (click)="prevStep()">Prev</button> -->
+                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+            <mat-expansion-panel [expanded]="step === 1">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Family Detail
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        (Not Mandatory)
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Mother's Name">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Father's Name">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput type="number" placeholder="Contact Number">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" placeholder="Email Address">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <mat-action-row>
+                    <button mat-button color="warn" (click)="prevStep()">Prev</button>
+                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+            <mat-expansion-panel [expanded]="step === 2">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Document Detail
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        (Not Mandatory)
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Mother's Name">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Father's Name">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput type="number" placeholder="Contact Number">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" placeholder="Email Address">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <mat-action-row>
+                    <button mat-button color="warn" (click)="prevStep()">Prev</button>
+                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+            <mat-expansion-panel [expanded]="step === 3">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Occupation Detail
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        (Not Mandatory)
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Mother's Name">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Father's Name">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput type="number" placeholder="Contact Number">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" placeholder="Email Address">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <mat-action-row>
+                    <button mat-button color="warn" (click)="prevStep()">Prev</button>
+                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+            <mat-expansion-panel [expanded]="step === 4" hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Other Detail
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        (Not Mandatory)
+                    </mat-panel-description>
+                    <mat-icon>map_marker</mat-icon>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Mother's Name">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput placeholder="Father's Name">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="10px">
+                        <mat-form-field fxFlex>
+                            <input matInput type="number" placeholder="Contact Number">
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" placeholder="Email Address">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <mat-action-row>
+                    <button mat-button color="warn" (click)="prevStep()">Prev</button> 
+                    <button mat-button color="primary" (click)="nextStep()">End</button> 
+                </mat-action-row>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
 </form>

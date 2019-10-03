@@ -1,10 +1,46 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">Sidenav</mat-sidenav>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">Sidenav</mat-sidenav>
     <mat-sidenav-content>
-        <button (click)="opened = !opened">Toggle</button>
-        <button (click)="sidenav.open()">Toggle Open</button>
-        <button (click)="sidenav.close()">Toggle Close</button>
-        <app-liberty-toolbar></app-liberty-toolbar>
+        <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+            <span fxFlex fxLayoutAlign="start center">
+                <button mat-button (click)="opened = !opened">
+                    <mat-icon>dehaze</mat-icon>
+                </button>
+                Liberty UI
+            </span>
+            <div fxFlex fxLayoutAlign="end center" fxLayoutGap="10px">
+                <form [formGroup] class="example-form">
+                    <mat-form-field class="example-full-width">
+                        <mat-icon matPrefix>search</mat-icon>
+                        <input matInput>
+                    </mat-form-field>
+                </form>
+                <mat-icon matBadge="4" matBadgeOverlap="true" matBadgeColor="accent">notifications </mat-icon>
+                <button mat-icon-button [matMenuTriggerFor]="mainMenu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #mainMenu="matMenu">
+                    <button mat-menu-item fxLayoutAlign="start center">
+                        <mat-icon>person</mat-icon>
+                        Profile
+                    </button>
+                    <button mat-menu-item fxLayoutAlign="start center">
+                        <mat-icon>settings_applications</mat-icon>
+                        Settings
+                    </button>
+                    <button mat-menu-item fxLayoutAlign="start center" [matMenuTriggerFor]="moreMenu">
+                        <mat-icon>add</mat-icon>
+                        More
+                    </button>
+                </mat-menu>
+                <mat-menu #moreMenu="matMenu" fxLayoutAlign="start center">
+                    <button mat-menu-item>
+                        Logout
+                    </button>
+                </mat-menu>
+            </div>
+        </mat-toolbar>
+        <!-- <app-liberty-toolbar></app-liberty-toolbar> -->
         <app-liberty-tabs></app-liberty-tabs>
     </mat-sidenav-content>
 </mat-sidenav-container>
