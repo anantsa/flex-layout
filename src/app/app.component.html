@@ -1,21 +1,31 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened">Sidenav</mat-sidenav>
+    <mat-sidenav #sidenav mode="push" [(opened)]="opened" class="sidenav-container">
+        <h4 fxHide.gt-xs>Liberty UI</h4>
+        <mat-list role="list">
+            <mat-list-item role="listitem"><a href="#"><mat-icon>person</mat-icon>Dashboard</a></mat-list-item>
+            <mat-list-item role="listitem"><a href="#">Widget</a></mat-list-item>
+            <mat-list-item role="listitem"><a href="#">UI Elements</a></mat-list-item>
+            <mat-list-item role="listitem"><a href="#">Pages</a></mat-list-item>
+            <mat-list-item role="listitem"><a href="#">Form</a></mat-list-item>
+            <mat-list-item role="listitem"><a href="#">Apps</a></mat-list-item>
+        </mat-list>
+    </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
-            <span fxFlex fxLayoutAlign="start center">
-                <button mat-button (click)="opened = !opened">
-                    <mat-icon>dehaze</mat-icon>
-                </button>
+            <button mat-button>
+                <mat-icon (click)="opened = !opened">menu</mat-icon>
+            </button>
+            <span fxFlex fxLayoutAlign="start center" fxHide.xs>
                 Liberty UI
             </span>
             <div fxFlex fxLayoutAlign="end center" fxLayoutGap="10px">
-                <form [formGroup] class="example-form">
-                    <mat-form-field class="example-full-width">
+                <form [formGroup]>
+                    <mat-form-field>
                         <mat-icon matPrefix>search</mat-icon>
                         <input matInput>
                     </mat-form-field>
                 </form>
-                <mat-icon matBadge="4" matBadgeOverlap="true" matBadgeColor="accent">notifications </mat-icon>
+                <mat-icon matBadge="4" matBadgeOverlap="true" matBadgeColor="accent" fxHide.xs>notifications </mat-icon>
                 <button mat-icon-button [matMenuTriggerFor]="mainMenu">
                     <mat-icon>more_vert</mat-icon>
                 </button>

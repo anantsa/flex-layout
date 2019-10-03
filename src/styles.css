@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 html,
+a {
+  text-decoration: none;
+}
+
 body {
   height: 100%;
 }
@@ -22,7 +26,7 @@ body {
 }
 
 .no-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .m-tb-10 {
@@ -39,5 +43,14 @@ body {
 
 .product-data {
   padding: 10px 0;
+}
+
+.mat-tab-label-active {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#484de5), color-stop(#574eec), color-stop(#654ef2), color-stop(#734ef9), to(#804eff));
+  background-image: linear-gradient(to right top, #484de5, #574eec, #654ef2, #734ef9, #804eff);
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  color: white;
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

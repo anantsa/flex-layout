@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,SAAS,AAAA,UAAU,CAAC;EAClB,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,GAAG;CACZ;;AAED,AAAA,qBAAqB,AAAA,SAAS,CAAA;EAC5B,KAAK,EAAE,eAAe;CACvB",
     "sources": [
         "liberty-tabs.component.scss"
     ],

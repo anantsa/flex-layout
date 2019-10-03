@@ -24,6 +24,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -31,7 +32,6 @@ import { MatRadioModule } from '@angular/material/radio';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LibertyTabsComponent } from './liberty-tabs/liberty-tabs.component';
-import { LibertyToolbarComponent } from './liberty-toolbar/liberty-toolbar.component';
 import { ProfileDashboardComponent } from './profile-dashboard/profile-dashboard.component';
 import { TableDataComponent } from './table-data/table-data.component';
 import { UserFormComponent } from './user-form/user-form.component';
@@ -46,7 +46,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AppComponent,
     DashboardComponent,
     LibertyTabsComponent,
-    LibertyToolbarComponent,
     ProfileDashboardComponent,
     TableDataComponent,
     UserFormComponent
@@ -78,7 +77,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatSidenavModule,
     FormsModule,
     MatExpansionModule,
-    MatRadioModule
+    MatRadioModule,
+    MatListModule
 
   ],
   providers: [],

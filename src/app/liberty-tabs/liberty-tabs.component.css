@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=liberty-tabs.component.css.map */
+.mat-icon.tab-items {
+  margin: 5px;
+  padding: 8px;
+  margin: 5px;
+}
+
+.mat-tab-label-active.tab-item {
+  color: #fff !important;
+}
+/*# sourceMappingURL=liberty-tabs.component.css.map */
