@@ -13,7 +13,7 @@
         </mat-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-toolbar fxLayout fxLayoutAlign="space-between center">
             <button mat-button>
                 <mat-icon (click)="opened = !opened">menu</mat-icon>
             </button>
@@ -58,27 +58,26 @@
 
 <div class="container">
     <h5>Fixed Width of 33% each</h5>
-    <div class="parent" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
-        <div fxFlex="33" class="flex-bg">1</div>
-        <div fxFlex="33" class="flex-bg">2</div>
-        <div fxFlex="33" class="flex-bg">3</div>
+    <div class="parent" fxLayout fxLayout.xs="column" fxLayoutAlign="space-between center">
+        <div fxFlex="33" class="flex-bg" fxFlexFill>1</div>
+        <div fxFlex="33" class="flex-bg" fxFlexFill>2</div>
+        <div fxFlex="33" class="flex-bg" fxFlexFill>3</div>
     </div>
     <br>
 
     <h5>Using fxFlex</h5>
-    <div class="parent" fxLayout="row" fxLayout.xs="column" fxLayoutGap="2px">
-        <div class="flex-bg" fxFlex>1234</div>
-        <div class="flex-bg" fxFlex>1234</div>
-        <div class="flex-bg" fxFlex>1234</div>
+    <div class="parent" fxLayout fxLayout.xs="column" fxLayoutGap="2px" fxLayoutGap.xs="0">
+        <div class="flex-bg" fxFlex.lt-md="25" fxFlex.gt-md="10" fxFlex>A</div>
+        <div class="flex-bg" fxFlex fxHide.lt-md>B</div>
+        <div class="flex-bg" fxFlex.lt-md="25" fxFlex.gt-md="10" fxFlex>C</div>
     </div>
-
+    <!-- ngClass="['flex-bg','newStyle']" [ngClass.lt-sm]="{'newStyle':true, 'flex-bg':false}"  -->
     <h5>5 columns</h5>
     <div class="parent" fxLayout="row wrap" fxLayoutGap="2px">
-        <div class="flex-bg" ngClass="['flex-bg','newStyle']" [ngClass.lt-sm]="{'newStyle':true, 'flex-bg':false}" fxFlex.lt-lg="33" fxFlex>A</div>
-        <div class="flex-bg" fxFlex.lt-lg="33" fxFlex>B</div>
-        <div class="flex-bg" fxFlex.lt-lg="33" fxFlex>C</div>
-        <div class="flex-bg" fxFlex >D</div>
-        <div class="flex-bg" fxFlex >E</div>
+        <div class="flex-bg" fxFlex="33" >A</div>
+        <div class="flex-bg" fxFlex="33" >B</div>
+        <div class="flex-bg" fxFlex="33" >C</div>
+        <div class="flex-bg" fxFlex="33" >D</div>
+        <div class="flex-bg" fxFlex="33" >E</div>
     </div>
-
 </div>
